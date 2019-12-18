@@ -10,6 +10,16 @@ services:
     ports: 
       - "8082:8080"
     restart: always
+  api-exp:
+    container_name: api-exp
+    hostname: api-exp
+    image: edo/express-be:1.0
+    build:
+      context: ../Express-Docker
+      dockerfile: dockerfile
+    ports: 
+      - "6969:6969"
+    restart: always
   fe:
     container_name: fe
     hostname: fe
