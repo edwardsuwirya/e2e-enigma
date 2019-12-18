@@ -5,7 +5,7 @@ services:
     hostname: api
     image: edo/bootdocker:1.0
     build:
-      context: ../bootdocker
+      context: ../boot-docker
       dockerfile: dockerfile
     ports: 
       - "8080:8080"
@@ -13,9 +13,9 @@ services:
   fe:
     container_name: fe
     hostname: fe
-    image: edo/calc:1.0
+    image: edo/hergan-klontong:1.0
     build:
-      context: ../reactdocker
+      context: ../Simple-React-Docker
       dockerfile: dockerfile
     ports:
       - "80:80"
