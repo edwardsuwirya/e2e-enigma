@@ -8,7 +8,7 @@ services:
       context: ../boot-docker
       dockerfile: dockerfile
     ports: 
-      - "8080:8080"
+      - "8082:8080"
     restart: always
   fe:
     container_name: fe
