@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  api:
+    container_name: api
+    hostname: api
+    image: edo/bootdocker:1.0
+    build:
+      context: ../bootdocker
+      dockerfile: dockerfile
+    ports: 
+      - "8080:8080"
+    restart: always
+  fe:
+    container_name: fe
+    hostname: fe
+    image: edo/calc:1.0
+    build:
+      context: ../reactdocker
+      dockerfile: dockerfile
+    ports:
+      - "80:80"
+    restart: always
